@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Miimo Support</title>
+<meta name="description" content="Support, contact, and help for Miimo — the on-device capture, transcription, and assistant app for iPhone, iPad, and Mac.">
+<style>
+:root {
+  --bg: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  --accent: #0071e3;
+  --card: #f5f5f7;
+  --border: #e5e5ea;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #111113;
+    --fg: #f5f5f7;
+    --muted: #98989d;
+    --accent: #409cff;
+    --card: #1c1c1e;
+    --border: #2c2c2e;
+  }
+}
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+main { max-width: 42rem; margin: 0 auto; padding: 3rem 1.25rem 4rem; }
+header.site { max-width: 42rem; margin: 0 auto; padding: 1.25rem; display: flex; align-items: baseline; gap: 1.25rem; }
+header.site .brand { font-weight: 700; font-size: 1.05rem; color: var(--fg); text-decoration: none; }
+header.site nav { margin-left: auto; display: flex; gap: 1rem; }
+header.site nav a { color: var(--muted); text-decoration: none; font-size: .95rem; }
+header.site nav a:hover { color: var(--accent); }
+h1 { font-size: 2rem; line-height: 1.2; margin: 0 0 .5rem; letter-spacing: -.02em; }
+.tagline { color: var(--muted); margin: 0 0 2.5rem; font-size: 1.1rem; }
+h2 { font-size: 1.3rem; margin: 2.5rem 0 .75rem; letter-spacing: -.01em; }
+a { color: var(--accent); }
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1.25rem 1.5rem;
+  margin: 1rem 0;
+}
+.card h3 { margin: 0 0 .25rem; font-size: 1.05rem; }
+.card p { margin: .25rem 0 0; color: var(--muted); font-size: .95rem; }
+.card p b { color: var(--fg); font-weight: 600; }
+details {
+  border-bottom: 1px solid var(--border);
+  padding: .85rem 0;
+}
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+details summary::-webkit-details-marker { display: none; }
+details summary::after { content: "+"; color: var(--muted); font-size: 1.2rem; margin-left: 1rem; }
+details[open] summary::after { content: "–"; }
+details p { color: var(--muted); margin: .6rem 0 0; font-size: .97rem; }
+details p b { color: var(--fg); font-weight: 600; }
+footer {
+  max-width: 42rem; margin: 0 auto; padding: 0 1.25rem 3rem;
+  color: var(--muted); font-size: .85rem;
+}
+footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<header class="site">
+  <a class="brand" href="./">Miimo</a>
+  <nav>
+    <a href="./">Support</a>
+    <a href="privacy.html">Privacy</a>
+    <a href="terms.html">Terms</a>
+  </nav>
+</header>
+<main>
+  <h1>Miimo Support</h1>
+  <p class="tagline">Capture, transcribe, and organize — everything stays on your device.</p>
+
+  <div class="card">
+    <h3>Contact us</h3>
+    <p>Email <a href="mailto:raysonlim77@gmail.com"><b>raysonlim77@gmail.com</b></a> and we'll get back to you as soon as we can. You can also send a message directly from the app via <b>Settings&nbsp;→&nbsp;Send&nbsp;feedback</b> — it attaches your app version and device details automatically, which helps us help you faster.</p>
+  </div>
+
+  <h2>Frequently asked questions</h2>
+
+  <details>
+    <summary>Where is my data stored?</summary>
+    <p>On your device, and only there. Recordings, transcripts, notes, summaries, tasks, browser data, and assistant conversations are never uploaded to us — there is no cloud sync. See the <a href="privacy.html">Privacy Policy</a> for the full picture.</p>
+  </details>
+
+  <details>
+    <summary>How do I back up my library?</summary>
+    <p>Use <b>Settings → Backup</b> to create a backup, and save it somewhere you trust (Files, iCloud Drive, or anywhere you choose). Because nothing is stored in a cloud, deleting the app deletes your library — a backup is the only way to recover it.</p>
+  </details>
+
+  <details>
+    <summary>How do I manage or cancel my subscription?</summary>
+    <p>Subscriptions are handled by Apple. Open your device's <b>Settings → your name → Subscriptions</b> (or the App Store on Mac), select Miimo, and manage or cancel there. Cancellation takes effect at the end of the current billing period. Refund requests are also handled by Apple under its policies.</p>
+  </details>
+
+  <details>
+    <summary>How do I delete my account?</summary>
+    <p>In the app, go to <b>Settings → Account → Delete Account</b>. This permanently deletes your account record. Note that deleting your account does <b>not</b> cancel your subscription — cancel that separately in the App Store as described above.</p>
+  </details>
+
+  <details>
+    <summary>Transcription isn't working for my language — why?</summary>
+    <p>Transcription runs on your device using Apple's speech models. The first time you use a language, its model files are downloaded from Apple, so you'll need an internet connection for that one-time download. If a language's offline files aren't available on your device, Miimo falls back to Apple's system speech recognizer.</p>
+  </details>
+
+  <details>
+    <summary>Found a bug or have a feature request?</summary>
+    <p>We'd love to hear it. Use <b>Settings → Send feedback</b> in the app, or email <a href="mailto:raysonlim77@gmail.com">raysonlim77@gmail.com</a> with what happened and what you expected.</p>
+  </details>
+
+  <h2>Legal</h2>
+  <p><a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a></p>
+</main>
+<footer>
+  <p>© 2026 Miimo · <a href="mailto:raysonlim77@gmail.com">raysonlim77@gmail.com</a></p>
+</footer>
+</body>
+</html>
