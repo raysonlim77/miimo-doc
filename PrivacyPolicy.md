@@ -1,17 +1,39 @@
 # Privacy Policy
 
-_Last updated: July 2026_
+_Last updated: August 2026_
 
 Miimo is built around a simple promise: what you capture stays on your device. This policy explains what that means in practice — including the few things that don't stay, so the promise means something.
 
 ## The short version
 
 - Your recordings, transcripts, notes, summaries, tasks, browser data, and assistant conversations are stored **only on this device**. We never receive them.
+- Miimo's AI runs **on your device**, on Apple Intelligence. **Nothing you capture or type is sent to any third-party AI service** — Miimo has no such integration.
 - We **never sell** your data, run no advertising, and link no third-party tracking SDKs.
 - Using Miimo requires a **Miimo account** (Sign in with Apple). That account holds your identity and subscription state — never your content.
 - We count **how often the app is opened and where you are in the subscription funnel**, tied to that account. That is the whole of our analytics.
 - The one thing you can choose to send us is a **feedback message**, and only when you tap Send.
-- A few features reach the internet at your request — the built-in browser, and the assistant when you ask it to search the web or read a link. Those requests go to those sites, not to us.
+- A few features reach the internet at your request — the built-in browser, and the assistant when you ask it to search the web or read a link. Those requests go to those sites, not to us, and the assistant's web access is **off until you turn it on**.
+- Before any of this happens, Miimo shows you a **data-sharing screen inside the app** — what leaves, who receives it, and a switch for the optional part — and asks you to agree. It's re-readable anytime at Settings → Privacy & data.
+
+## Artificial intelligence: on your device, and nowhere else
+
+Everything Miimo describes as AI — live transcription and its polish, summaries, chapters, action items, translation, flashcards, quizzes, and the assistant that answers you — runs **on this device**, on Apple's on-device Foundation Models (Apple Intelligence). This is not a fallback or a preference: Miimo requires Apple Intelligence and will not run without it, which is why the app blocks itself with an explanation on a device where it isn't available.
+
+Stated plainly, because it is the question people ask:
+
+- **Miimo does not send your data to any third-party AI service.** Not OpenAI, not Google Gemini, not Anthropic, not Microsoft, not any other model provider or AI API. There is no such integration in the app, no API key in the binary, and no server of ours in between.
+- **Your recordings, transcripts, notes, and assistant messages are never used to train any model** — ours, Apple's, or anyone else's. They are never sold, shared, or sent to an advertiser or a data broker.
+- **The model never leaves your device, and neither does what you give it.** Prompts, attached images and documents, and the answers produced from them are created and kept locally.
+
+Two AI-adjacent downloads do use the network, and neither carries your content: Apple Intelligence and Apple's speech and translation models are fetched from Apple as model files, and if you choose to download an open model (Llama, Qwen, Phi, or a Whisper model) it comes from Hugging Face. In both cases only model weights travel, in one direction, and they then run offline.
+
+The one place the assistant *can* reach a third party is when you ask it to search the web or read a link — described under "When Miimo uses the network" below, off by default, and never carrying your recordings or notes.
+
+## Your permission, asked in the app
+
+Before you sign in and before you record anything, Miimo shows a data-sharing screen that lists every way data leaves this device, names each recipient, and marks which are optional. You agree to it to continue.
+
+The assistant's web access is presented there as a switch that starts **off**, and asking the assistant to search the web while it's off prompts you again at that moment rather than sending anything. You can review the whole disclosure, and turn web access on or off, at any time under **Settings → Privacy & data**. Turning it off applies to your very next message.
 
 ## What stays on your device
 
@@ -33,13 +55,25 @@ That last group is analytics, plainly: it is how we know how many people use Mii
 
 Your account is stored using Google Firebase (Authentication and Firestore), acting as our processor. We use no analytics SDK, and Firebase Analytics is deliberately not linked into the app.
 
+## Every third party involved, and what binds them
+
+This is the complete list. There are no others, and no AI service appears on it.
+
+- **Apple** — receives your Sign in with Apple identity, handles App Store purchases and subscriptions, receives speech audio only where your language has no on-device dictation files installed, and serves model and language-pack downloads. Governed by Apple's Privacy Policy (apple.com/legal/privacy), which affords protections equal to or greater than those described here.
+- **Google Firebase** (Authentication and Firestore) — receives your account record only: identity, subscription state, device and build facts, and the usage counters listed above. No content, ever. Firebase acts strictly as our data processor under the Google Cloud Data Processing Addendum: it may process this data only on our instructions, is bound to confidentiality and security obligations, and does not use it for its own purposes.
+- **DuckDuckGo** — receives only the search words you asked the assistant to look up, and only while you have web access turned on. Governed by DuckDuckGo's Privacy Policy (duckduckgo.com/privacy); the endpoint Miimo uses sets no tracking cookies and needs no account or API key.
+- **Sites you open** — in the built-in browser, or a link you hand the assistant. They receive an ordinary web request, exactly as they would from Safari, and each site's own privacy policy governs it. Miimo blocks well-known ad and tracker domains by default.
+- **Hugging Face** — receives nothing about you. A model file is downloaded; nothing is uploaded, and no account or identifier is sent.
+
+We share your data with no one else: no advertisers, no data brokers, no analytics vendors, and no AI or machine-learning provider.
+
 ## When Miimo uses the network
 
 Miimo captures, transcribes, translates, and plays back without a network connection. These are the only things that reach out, and most of them only when you ask:
 
 - **Your account.** Signing in, and the account fields described above, sync when the app launches or returns to the foreground.
 - **Speech recognition.** Transcription runs on your device. On iOS 26 and macOS 26 Miimo uses Apple's on-device speech model, downloading the language's model files from Apple the first time you use it. If that model can't be used — an older system, or a language whose offline files aren't available on your device — Miimo falls back to Apple's system speech recognizer, and in that case Apple may process that audio on its servers under Apple's privacy policy. That audio never reaches us, and Miimo still writes the transcript only to your device.
-- **The assistant's web access.** If you ask the assistant to search the web, your search words are sent to DuckDuckGo. If you give it a link to read, Miimo fetches that page from the site that hosts it. Both happen only in response to a message you send, and both send only the query or the link — never your recordings, notes, or the rest of the conversation. The answer is then written on your device by an on-device model. Nothing about these requests reaches us.
+- **The assistant's web access.** This is **off unless you turn it on**, on the first-run data-sharing screen or under Settings → Privacy & data. With it on: if you ask the assistant to search the web, your search words are sent to **DuckDuckGo**; if you give it a link to read, Miimo fetches that page from **the site that hosts it**. Both happen only in response to a message you send, and both send only the query or the link — never your recordings, notes, or the rest of the conversation. The answer is then written on your device by an on-device model. Nothing about these requests reaches us, and no AI service is involved on the far end — DuckDuckGo is a search engine, and the page is fetched as a browser would fetch it.
 - **The built-in browser.** Pages you open make ordinary web requests, exactly as any browser would. Miimo blocks well-known ad and tracker domains by default, which you can turn off globally or for a single site.
 - **Downloadable open models.** When you choose to download a local model — Llama, Qwen, Phi, or a Whisper model for the stop-time re-check — Miimo fetches it from Hugging Face. Only the model files are transferred; none of your content is sent, and once downloaded they run entirely offline.
 - **On-device translation.** Apple's Translation framework may download language packs from Apple; your text is translated on your device.
