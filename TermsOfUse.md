@@ -34,7 +34,7 @@ Everything you capture in Miimo is yours. It is stored on your device, we never 
 
 ## Acceptable use
 
-Use Miimo lawfully. Record and capture only content you have the right to, and comply with the laws that apply where you are — including any rules about recording conversations and consent. This applies equally to recording a Mac's system audio, capturing a screen or a deck, and capturing a call playing inside the built-in browser: the person using Miimo is responsible for having the right to record what it hears and sees.
+Use Miimo lawfully. Record and capture only content you have the right to, and comply with the laws that apply where you are — including any rules about recording conversations and consent. This applies equally to recording your device's system audio on a Mac, iPhone or iPad — including a broadcast you start from Apple's picker, which keeps recording while you're in another app — to capturing a screen or a deck, and to capturing a call playing inside the built-in browser: the person using Miimo is responsible for having the right to record what it hears and sees.
 
 Don't use Miimo to break the law, to infringe someone's rights, or to interfere with the app's licensing or subscription checks.
 
